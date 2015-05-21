@@ -1,0 +1,869 @@
+@font-face {
+    font-family: Neris;
+    src: url('/fonts/Neris-Light.otf');
+}
+
+@font-face {
+    font-family: NerisBlack;
+    src: url('/fonts/Neris-Black.otf');
+}
+
+@font-face {
+    font-family: NerisBold;
+    src: url('/fonts/Neris-SemiBold.otf');
+}
+
+@font-face {
+    font-family: NerisLight;
+    src: url('/fonts/Neris-Light.otf');
+}
+
+@font-face {
+    font-family: NerisItalic;
+    src: url('/fonts/Neris-LightItalic.otf');
+}
+
+body, html {
+	height: 100%;
+}
+
+*[contenteditable="true"] {
+	cursor: pointer;
+	padding: 5px;
+}
+
+i.glyphicon {
+	font-size: 18px;
+}
+
+.hidden {
+	display: none;
+}
+
+hr {
+	margin: 0;
+}
+
+span.highlight {
+	font-weight: bold;
+}
+
+section.instructions {
+	display: none;
+	position: absolute;
+	top: 35px;
+	opacity: 0.8;
+	z-index: 100;
+	background-color: white;
+}
+
+	h4.instructions {
+		display: none;
+		position: absolute;
+		width: 300px;
+		top: 150px;
+		left: 50px;
+		padding: 10px;
+		background-color: #fff;
+		color: red;
+		z-index: 100;
+	}
+
+section.actions.top {
+	text-align: right;
+	z-index: 100;
+}
+
+button.reset {
+	display: none;
+}
+
+p.description, li.description {
+	font-family: 'Calibri';
+}
+
+main.easy-builder {
+	position: relative;
+	margin: 20px auto;
+}
+
+header {
+	color: #FFF;
+	box-shadow: 0 2px 1px #888888;
+	background-image: linear-gradient(to bottom, #F18C54 35%, #E76D19 100%);
+}
+
+	header div {
+		height: 100%;
+		float: left;
+	}
+
+	div.lesson-label {
+		box-shadow: 2px 3px 5px 0px rgba(112, 69, 69, 0.62);
+		border-bottom-right-radius: 20px;
+		background-image: linear-gradient(to bottom, #E45748 35%, #C00B0B 100%);
+		padding-bottom: 20px;
+	}
+	
+		h1 {
+			font-family: NerisBlack;
+		}
+		
+		div.lesson-type h2 {
+			font-family: NerisBold;
+			z-index: 2;
+		}
+		
+		div.lesson-title h2 {
+			font-family: 'Delius';
+			z-index: 2;
+		}
+	
+img.picture.header {
+	position: absolute;
+	z-index: 2;
+}
+
+section.lesson div {
+	height: 100%;
+	float: left;
+}
+
+section.parts {
+	border: 1px solid #BF9000;
+	background-image: linear-gradient(to bottom, #EDE1BE 35%, #FFE79C 100%);
+}
+
+		div.structure h3 {
+			font-family: NerisBlack;
+			color: #BF9000;
+			z-index: 2;
+		}
+		
+		div.train img {
+			cursor: pointer;
+			z-index: 2;
+		}
+	
+		img[data-part="intro"] {
+			position: relative;
+		}
+		
+		img[data-part="info"] {
+			position: relative;
+		}
+		
+			span.intro {
+				position: relative;
+			}
+			
+			span.info {
+				position: relative;
+			}
+			
+			span.review {
+				position: relative;
+			}
+
+section.how-it-helps {
+	position: relative;
+	z-index: 1;
+	border: 1px solid #BF9000;
+	box-shadow: 0 2px 1px #888888;
+	background-image: linear-gradient(to bottom, #F3F9D6 35%, #DCED89 100%);
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+	
+	div.how-it-helps h3 {
+		font-family: NerisBlack;
+		color: #8E9F25;
+		z-index: 2;
+	}
+
+div.sidebar {
+	border-right: 2px solid #A3CDCB;
+	border-bottom: 2px solid #A3CDCB;
+	background-image: linear-gradient(to right, #DDF4F3 35%, #BAE8E6 100%);
+	float: left;
+}
+
+	div.icon {
+		text-align: center;
+		font-family: NerisBold;
+		z-index: 2;
+	}
+	
+div.steps {
+	float: left;
+}
+
+	div.steps-title {
+		clear: both;
+	}
+
+	div.steps h2 {
+		float: left;
+		padding-right: 20px;
+		font-family: NerisBlack;
+		color: #C00000;
+		z-index: 2;
+	}
+	
+	div.steps button {
+		margin-top: 25px;
+		z-index: 2;
+	}
+	
+	div.step {
+		float: left;
+	}
+	
+	div.step.variation {
+		min-height: 475px;
+	}
+	
+	#variation-content {
+		margin-left: 100px;
+	}
+	
+	#variation-content  p.description {
+		height: 140px;
+	}
+
+	button.command i {
+		font-size: 12px;
+	}
+	
+		div.step .title  {
+			font-weight: bold;
+			font-family: NerisLight;
+			color: #238580;
+			z-index: 2;
+		}
+		
+		div.variation .title {
+			
+		}
+		
+		div.variation hr {
+			border-top: 1px solid #9B9B9B;
+		}
+		
+		div.step .title, div.step .description {
+			padding-left: 5px;
+			z-index: 2;
+		}
+		
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 185px;
+	padding: 10px 30px;
+	background-image: linear-gradient(to bottom right, #FFFFFF 0%, #FFE5A0 100%);
+}
+
+	div.benefits {
+		margin-left: 165px;
+	}
+
+		footer h3 {
+			color: #238580;
+			padding: 0 0 15px 15px;
+		}
+		
+		footer button {
+			float: left;
+		}
+		
+		footer p {
+			float: left;
+			display: inline-block;
+			margin: -15px 0 0 20px;
+			height: 120px;
+			width: 500px;
+		}
+		
+	div.question-header {
+		padding: 20px 0 20px 215px;
+		color: #7F6000;
+		box-shadow: 0 5px 1px #888888;
+		border-left: 1px solid #C6C6C6;
+		border-right: 1px solid #C6C6C6;
+		border-bottom: 1px solid #C6C6C6;
+		background-image: linear-gradient(to bottom right, #FFFFFF 0%, #FFE5A0 100%);
+	}
+	
+		.question-header h2.title {
+			font-family: NerisBlack;
+			font-size: 28px;
+		}
+		
+			i.glyphicon-check {
+				font-size: 24px;
+				padding-right: 10px;
+			}
+		
+			.question-header p.instructions {
+				font-family: NerisLight;
+				font-weight: bold;
+				font-size: 16px;
+				width: 550px;
+			}
+	
+	#question-content {
+		margin: 40px 0 0 210px;
+		font-size: 24px;
+		font-family: NerisLight;
+	}
+	
+		ol.question li {
+			margin-bottom: 65px;
+			width: 540px;
+		}
+		
+		ol.question li ol {
+			margin-top: 15px;
+		}
+
+i.glyphicon-search {
+	font-size: 24px;
+	padding-right: 20px;
+}
+		
+#references div.left, div.right {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	height: 600px;
+	padding: 40px 80px 0;
+	font-family: NerisBold;
+}
+
+#references div.left {
+	border-right: 1px solid;
+	height: 100%;
+}
+
+	#references div.left h3 {
+		color: #959F25;
+		font-style: italic;
+		padding-bottom: 20px;
+	}
+
+	#references div.right h3 { 
+		color: #2E75B6;
+		font-style: italic;
+		padding-bottom: 20px;
+	}
+
+	#references p.description {
+		height: 700px;
+		margin-left: 0;
+	}
+		
+iframe {
+	width: 900px;
+	height: 500px;
+}
+
+form.easy-builder, iframe.form-result {
+	/* display: none; */
+	border: 1px dashed;
+}
+
+@media print, (max-width: 800px) {
+	main {
+		width: 730px;
+		height: 1080px;
+		/* border: 1px dashed red; */
+	}
+	
+	header {
+		height: 65px;
+	}
+	
+		div.lesson-label {
+			width: 105px;
+		}
+		
+			h1 {
+				font-size: 26px;
+				margin: 0 0 0 15px;
+			}
+		
+		div.lesson-type {
+			width: 175px;
+			margin: 0 19px;
+		}
+		
+			div.lesson-type h2 {
+				font-size: 21px;
+			}
+		
+		div.lesson-title {
+			width: 405px;
+		}
+		
+			div.lesson-title h2 {
+				margin-top: 15px;
+			}
+			
+	img.logo {
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		height: 50px;
+	}
+		
+	img.picture.header {
+		margin: 8px 0 0 30px;
+		max-width: 260px;
+	}
+
+	section.lesson {
+		height: 112px;
+	}
+
+		div.structure {
+			width: 160px;
+			margin-left: 310px;
+		}
+		
+			div.structure h3 {
+				font-size: 20px;
+			}
+			
+			div.structure p.description {
+				font-size: 12px;
+			}
+		
+		div.train {
+			width: 240px;
+			margin-left: 15px;
+		}
+		
+			div.train img {
+				margin-top: 17px;
+			}
+		
+			img[data-part="intro"] {
+				width: 63px;
+				left: 10px;
+			}
+			
+			img[data-part="info"] {
+				width: 80px;
+				left: 5px;
+			}
+			
+			img[data-part="review"] {
+				width: 80px;
+			}
+			
+			div.train span {
+				font-size: 11px;
+			}
+			
+				span.intro {
+					left: 9px;
+				}
+				
+				span.info {
+					left: 12px;
+				}
+				
+				span.review {
+					left: 30px;
+				}
+		
+		div.how-it-helps {
+			margin-left: 310px;
+			width: 330px;
+		}
+
+	div.sidebar {
+		margin-top: -30px;
+		padding-top: 100px;
+		width: 140px;
+		height: 820px;
+	}
+
+		div.icon {
+			height: 130px;
+		}
+		
+			div.picture-icon {
+				width: 110px;
+				height: 98px;
+				margin-left: 5px;
+			}
+		
+				div.icon img {
+					max-width: 110px;
+					max-height: 98px;
+				}
+			
+			div.icon p {
+				margin-top: -5px;
+			}
+		
+	div.steps {
+		margin:  0 40px;
+		width: 508px;
+	}
+
+		div.steps h2 {
+			margin: 12px 0 20px 8px;
+			font-size: 36px;
+		}
+		
+		div.step {
+			width: 220px;
+			height: 280px;
+			float: left;
+		}
+		
+		div.step[data-step="1"], div.step[data-step="3"] {
+			margin-right: 66px;
+		}
+		
+		div.step[data-step="1"], div.step[data-step="2"] {
+			margin-bottom: 10px;
+		}
+		
+			div.picture-step {
+				width: 190px;
+				height: 151px;
+			}
+		
+				div.step img {
+					max-width: 190px;
+					max-height: 151px;
+				}
+			
+			div.step p {
+				margin-left: 15px;
+			}
+			
+			div.step .title  {
+				font-size: 20px;
+			}
+			
+			div.step .description {
+				font-size: 13px;
+			}
+}
+
+@media only print {
+	button, i, form, iframe {
+		display: none !important;
+	}
+	
+	.lesson-label, .how-it-helps {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+	
+	div.lesson-type {
+		width: 185px;
+	}
+	
+	div.lesson-title {
+		width: 395px;
+	}
+	
+		div.lesson-title h2 {
+			margin-top: 12px;
+		}
+	
+	div.how-it-helps h3 {
+		margin: 10px;
+	}
+	
+	div.how-it-helps .description {
+		margin-top: -10px;
+	}
+	
+	.sidebar {
+		min-height: 680px !important;
+		padding-top: 100px !important;
+		margin-top: -30px;
+	}
+
+	div.steps.variation {
+		height: 820px;
+	}
+	
+	div.steps h2 {
+		margin: 12px 0 12px 8px;
+		font-size: 36px;
+	}
+	
+	div.step[data-step="1"], div.step[data-step="2"] {
+		margin-bottom: 10px !important;
+	}
+	
+	div.icon[data-step="5"] {
+		padding-top: 10px !important;
+	}
+	
+	div.step[data-step="5"] {
+		margin-top: 20px !important;
+	}
+	
+	div.step .title {
+		margin-bottom: 0;
+	}
+	
+	div.step .description {
+		margin-top: 0;
+	}
+	
+	div.step.variation {
+		min-height: 300px !important;
+	}
+	
+	footer {
+		height: 135px;
+		position: relative;
+		bottom: 0;
+	}
+	
+		footer h3 {
+			padding-bottom: 0;
+		}
+
+	main.question {
+		height: 1075px;
+	}	
+}
+
+@media (min-width: 1200px) {
+	main {
+		height: 1330px;
+		border-bottom: 1px solid #C6C6C6;
+		border-right: 1px solid #C6C6C6;
+	}
+	
+	main.variation, main.question {
+		border-left: 1px solid #C6C6C6;
+	}
+	
+	main, section.instructions {
+		width: 1200px;
+	}
+	
+	section.instructions {
+		height: 100%;
+	}
+	
+	div.step p.title span {
+		display: inline-block;
+		min-width: 132px;
+	}	
+	
+	header {
+		height: 85px;
+	}
+	
+		div.lesson-label {
+			width: 195px;
+		}
+		
+			h1 {
+				font-size: 32px;
+				margin: 20px 0 0 15px;
+			}
+		
+		div.lesson-type {
+			width: 290px;
+			margin: 0 20px 0 60px;
+		}
+		
+			div.lesson-type h2 {
+				font-size: 28px;
+				margin-top: 23px;
+			}
+			
+			div.lesson-type span {
+				display: inline-block;
+				min-width: 132px;
+			}
+		
+		div.lesson-title {
+			width: 520px;
+		}
+		
+			div.lesson-title h2 {
+				margin-top: 16px;
+				font-size: 42px;
+			}
+	
+	img.logo {
+		position: relative;
+		top:  8px;
+		xright: 20px;
+		xtop: 45px;
+	}
+		
+	img.picture.header {
+		margin: 30px 0 0 40px;
+		max-width: 360px;
+		max-height: 265px;
+	}
+	
+	p.description, li.description {
+		font-size: 20px;
+	}
+
+	section.lesson {
+		height: 160px;
+	}
+
+		div.structure {
+			width: 215px;
+			margin-left: 425px;
+		}
+		
+			div.structure h3 {
+				font-size: 26px;
+				margin-top: 40px;
+			}
+			
+			div.structure p.description {
+				font-size: 18px;
+				margin-top: 0;
+			}
+		
+		div.train {
+			width: 490px;
+			margin-left: 50px;
+		}
+		
+			div.train img {
+				margin-top: 20px;
+			}
+		
+			img[data-part="intro"] {
+				width: 125px;
+				left: 10px;
+			}
+			
+			img[data-part="info"] {
+				width: 153px;
+				left: 5px;
+			}
+			
+			img[data-part="review"] {
+				width: 147px;
+			}
+			
+			div.train span {
+				display: inline-block;
+				margin-top: 2px;
+				font-size: 16px;
+			}
+			
+				span.intro {
+					left: 30px;
+				}
+				
+				span.info {
+					left: 70px;
+				}
+				
+				span.review {
+					left: 135px;
+				}
+		
+		div.how-it-helps {
+			margin-left: 425px;
+			width: 540px;
+		}
+		
+			div.how-it-helps h3 {
+				margin-top: 25px;
+				font-size: 34px;
+				margin-bottom: 5px;
+			}
+
+	div.sidebar {
+		margin-top: -30px;
+		padding-top: 120px;
+		width: 160px;
+		height: 918px;
+	}
+
+		div.icon {
+			height: 160px;
+		}
+		
+			div.picture-icon {
+				width: 150px;
+				height: 126px;
+				margin-left: 5px;
+			}
+		
+				div.icon img {
+					max-width: 150px;
+					max-height: 126px;
+				}
+			
+			div.icon p {
+				margin-top: -10px;
+			}
+		
+	div.steps {
+		margin: 0 40px 0 100px;
+		width: 895px;
+	}
+
+		div.steps h2 {
+			margin: 20px 0 20px 8px;
+			font-size: 36px;
+		}
+		
+		div.step {
+			width: 390px;
+			min-height: 400px;
+			float: left;
+		}
+		
+		div.step[data-step="1"], div.step[data-step="3"] {
+			margin-right: 100px;
+		}
+		
+		div.step[data-step="1"], div.step[data-step="2"] {
+			margin-bottom: 10px;
+		}
+		
+		div.step[data-step="5"] {
+			margin-top: 10px;
+		}
+		
+		    div.picture-step {
+				width: 260px;
+				height: 231px;
+			}
+		
+				div.step img {
+					max-width: 260px;
+					max-height: 231px;
+				}
+			
+			div.step p, button.command {
+				margin-left: 15px;
+				margin-top: -10px;
+			}
+			
+			div.step .title  {
+				font-size: 24px;
+				margin-bottom: 0;
+			}
+			
+			div.step .description {
+				margin-top: 0;
+			}
+}

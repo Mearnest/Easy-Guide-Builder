@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="/img/icon.png">
+		
+		<title>Easy Guide</title>
+		
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/jquery-ui.min.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Delius' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<main class="easy-builder">
+			<section class="actions top">
+				<button type="button" class="btn btn-warning reset"><i class="glyphicon glyphicon-refresh"></i> Reset</button>
+				<button type="button" class="btn btn-info instructions"><i class="glyphicon glyphicon-info-sign"></i> Instructions</button>
+				<button type="button" class="btn btn-primary print"><i class="glyphicon glyphicon-print"></i> Print</button>
+				<button type="button" class="btn btn-success pdf"><i class="glyphicon glyphicon-file"></i> Generate PDF</button>
+				<button type="button" class="btn btn-danger save"><i class="glyphicon glyphicon-cloud"></i> Save</button>
+			</section>
+			
+			<header>
+				<div class="lesson-label">
+					<h1>Easy Guide</h1>
+				</div>
+				<div class="lesson-type">
+					<h2>Teaching <span id="lesson-type" class="title save" contenteditable="true" title="Click to modify type" data-default="true" data-max="3">Strategy: </span><i class="glyphicon glyphicon-pencil"></i></h2>
+				</div>
+				<div class="lesson-title">
+					<h2 id="lesson-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="8">Lesson Title <i class="glyphicon glyphicon-pencil"></i></h2>
+				</div>
+				<img class="logo" src="/img/bfl-logo.png">
+			</header>
+			
+			<img id="picture-header" class="picture header btn save" src="/img/placeholder.png" title="Click to insert image">
+			
+			<section class="lesson parts">
+				<div class="structure">
+					<h3>When to Use It</h3>
+					<p id="when-to-use" class="description save">Click the parts of a lesson this strategy can be used in.</p>
+				</div>
+				<div class="train">
+					<img id="lesson-intro" class="save" src="/img/intro.png" title="Click to check" data-part="intro" tab-index="3">
+					<img id="lesson-info" class="save" src="/img/info.png" title="Click to check" data-part="info" tab-index="3">
+					<img id="lesson-review" class="save" src="/img/review.png" title="Click to check" data-part="review" tab-index="3">
+					
+					<br>
+					<span class="intro part">Introduction</span>
+					<span class="info part">New Information</span>
+					<span class="review part">Review</span>
+					
+					<!-- Load these ahead of time so there is no wait. -->
+					<img src="/img/intro-checked.png" title="Click to uncheck" data-part="intro" hidden>
+					<img src="/img/info-checked.png" title="Click to uncheck" data-part="info" hidden>
+					<img src="/img/review-checked.png" title="Click to uncheck" data-part="review" hidden>
+				</div>
+			</section>
+			
+			<section class="lesson how-it-helps">
+				<div class="left"></div>
+				<div class="how-it-helps">
+					<h3  id="how-it-helps-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="6">How it Helps <i class="glyphicon glyphicon-pencil"></i></h3>
+					<p id="how-it-helps-description" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="30">Add a description for how this strategy helps here. <i class="glyphicon glyphicon-pencil"></i></p>
+				</div>
+			</section>
+			
+			<section>
+				<div class="sidebar">
+					<div class="icon" data-step="1">
+						<div class="picture-icon">
+							<img id="icon1" class="picture btn save" src="/img/placeholder_icon.png" title="Click to insert image" data-step="1">
+						</div>
+						<p class="title">1. <span>Step Name</span></p>
+					</div>
+					
+					<div class="icon" data-step="2">
+						<div class="picture-icon">
+							<img id="icon2" class="picture btn save" src="/img/placeholder_icon.png" title="Click to insert image" data-step="2">
+						</div>
+						<p class="title">2. <span>Step Name</span></p>
+					</div>
+					
+					<div class="icon" data-step="3">
+						<div class="picture-icon">
+							<img id="icon3" class="picture btn save" src="/img/placeholder_icon.png" title="Click to insert image" data-step="3">
+						</div>
+						<p class="title">3. <span>Step Name</span></p>
+					</div>
+					
+					<div class="icon hidden" data-step="4">
+						<div class="picture-icon">
+							<img id="icon4" class="picture btn save" src="/img/placeholder_icon.png" title="Click to insert image" data-step="4">
+						</div>
+						<p class="title">4. <span>Step Name</span></p>
+					</div>
+					
+					<div class="icon hidden" data-step="5">
+						<div class="picture-icon">
+							<img id="icon5" class="picture btn save" src="/img/placeholder_icon.png" title="Click to insert image" data-step="5">
+						</div>
+						<p class="title">5. <span>Step Name</span></p>
+					</div>
+				</div>
+				
+				<div class="steps">
+					<h2>The Steps</h2>
+					<button type="button" class="btn btn-primary step" data-step="2">Two Steps</button>
+					<button type="button" class="btn btn-default step" data-step="3">Three Steps</button>
+					<button type="button" class="btn btn-primary step" data-step="4">Four Steps</button>
+					<!-- <button type="button" class="btn btn-primary step" data-step="5">Five Steps</button> -->
+					
+					<p class="clearfix"></p>
+					
+					<div class="step" data-step="1">
+						<div class="picture-step">
+							<img id="step1-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p class="title">1. <span id="step1-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="1">Step Name</span> <i class="glyphicon glyphicon-pencil"></i></p>
+						<p id="step1-description" class="description save" contenteditable="true" title="Click to modify title" data-default="true" data-max="30" data-step="1">Description of the step goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div><!-- /.step -->
+					
+					<div class="step" data-step="2">
+						<div class="picture-step">
+							<img id="step2-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p class="title">2. <span id="step2-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="2">Step Name</span> <i class="glyphicon glyphicon-pencil"></i></p>
+						<p id="step2-description" class="description save" contenteditable="true" title="Click to modify title" data-default="true" data-max="30" data-step="2">Description of the step goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div><!-- /.step -->
+					
+					<div class="step" data-step="3">
+						<div class="picture-step">
+							<img id="step3-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p class="title">3. <span id="step3-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="3">Step Name</span> <i class="glyphicon glyphicon-pencil"></i></p>
+						<p id="step3-description" class="description save" contenteditable="true" title="Click to modify title" data-default="true" data-max="30" data-step="3">Description of the step goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div><!-- /.step -->
+					
+					<div class="step hidden" data-step="4">
+						<div class="picture-step">
+							<img id="step4-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p class="title">4. <span id="step4-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="4">Step Name</span> <i class="glyphicon glyphicon-pencil"></i></p>
+						<p id="step4-description" class="description save" contenteditable="true" title="Click to modify title" data-default="true" data-max="30" data-step="4">Description of the step goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div><!-- /.step -->
+					
+					<div class="step hidden" data-step="5">
+						<div class="picture-step">
+							<img id="step5-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p class="title">5. <span id="step5-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="5">Step Name</span> <i class="glyphicon glyphicon-pencil"></i></p>
+						<p id="step5-description" class="description save" contenteditable="true" title="Click to modify title" data-default="true" data-max="30" data-step="5">Description of the step goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div><!-- /.step -->
+				</div> <!-- /.steps -->
+			</section>
+		</main>
+		
+		<main class="easy-builder variation">
+			<header>
+				<div class="lesson-label">
+					<h1>Easy Guide</h1>
+				</div>
+				<div class="lesson-type">
+					<h2>Teaching <span class="title">Strategy:</h2>
+				</div>
+				<div class="lesson-title">
+					<h2 class="title">Lesson Title</h2>
+				</div>
+				<img class="logo" src="/img/bfl-logo.png">
+			</header>
+			
+			<section id="variation-content">
+				<div class="steps variation">
+					<h2 class="steps">Variations</h2>
+					<button type="button" class="btn btn-default variation" data-step="1">Hide 1. Step</button>
+					<button type="button" class="btn btn-default variation" data-step="2">Hide 2. Step</button>
+					<button type="button" class="btn btn-default variation" data-step="3">Hide 3. Step</button>
+					<button type="button" class="btn btn-default variation hidden" data-step="4">Hide 4. Step</button>
+					<!-- <button type="button" class="btn btn-primary variation hidden" data-step="5">Hide 5. Step Name</button> -->
+					<button type="button" class="btn btn-primary variation" data-step="other"><i class="glyphicon glyphicon-plus"></i> Add Other</button>
+					
+					<p class="clearfix"></p>
+					
+					<div class="step variation" data-step="1">
+						<div class="picture-step">
+							<img id="variation1-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p id="variation1-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="1">1. Step Name <i class="glyphicon glyphicon-pencil"></i></p>
+												
+						<hr>
+						<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+						<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+						<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+						
+						<p id="variation1-description" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="100">Variation description. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div>
+						
+					<div class="step variation" data-step="2">
+						<div class="picture-step">
+							<img id="variation2-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p id="variation2-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="2">2. Step Name <i class="glyphicon glyphicon-pencil"></i></p>
+						
+						<hr>
+						<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+						<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+						<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+						
+						<p id="variation2-description" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="100">Variation description. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div>
+					
+					<div class="step variation" data-step="3">
+						<div class="picture-step">
+							<img id="variation3-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p id="variation3-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="3">3. Step Name <i class="glyphicon glyphicon-pencil"></i></p>
+						
+						<hr>
+						<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+						<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+						<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+						
+						<p id="variation3-description" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="100">Variation description. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div>
+					
+					<div class="step variation hidden" data-step="4">
+						<div class="picture-step">
+							<img id="variation4-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p id="variation4-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3" data-step="4">4. Step Name <i class="glyphicon glyphicon-pencil"></i></p>
+						
+						<hr>
+						<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+						<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+						<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+						
+						<p id="variation4-description" class="description variation save" contenteditable="true" title="Click to modify description" data-default="true" data-max="100">Variation description. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div>
+					
+					<div class="step variation hidden" data-step="other">
+						<div class="picture-step">
+							<img id="variation-other-picture" class="picture btn save" src="/img/placeholder.png" title="Click to insert image">
+						</div>
+						<p id="variation-other-title" class="title save" contenteditable="true" title="Click to modify title" data-default="true" data-max="3">Other Variations <i class="glyphicon glyphicon-pencil"></i></p>
+						<hr>
+						<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+						<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+						<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+						
+						<p id="variation-other-description" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="35">Other variation description. <i class="glyphicon glyphicon-pencil"></i></p>
+					</div>
+				</div> <!-- /.steps -->
+				
+			</section> <!-- /#variation-content -->
+			
+			<p class="clearfix"></p>
+			<footer>
+				<div class="benefits">
+					<h3 class="other-benefits"><i class="glyphicon glyphicon-plus"></i> Other Benefits</h3>
+					<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+					<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+					<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+					<p id="other-benefits" class="description save" contenteditable="true" title="Click to modify description" data-default="true" data-max="35">Description of benefits goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+				</div>
+			</footer>
+		</main>
+		
+		<main class="easy-builder question">
+			<header>
+				<div class="lesson-label">
+					<h1>Easy Guide</h1>
+				</div>
+				<div class="lesson-type">
+					<h2>Teaching <span class="title">Strategy:</h2>
+				</div>
+				<div class="lesson-title">
+					<h2 class="title">Lesson Title</h2>
+				</div>
+				<img class="logo" src="/img/bfl-logo.png">
+			</header>
+			
+			<div class="question-header">
+				<h2 class="title"><i class="glyphicon glyphicon-check"></i> Check Yourself</h2>
+				<p class="instructions">
+					Answer these questions to see how well you have learned this strategy. Then check your answers by finding the information in the video and Easy Guide.
+				</p>
+			</div>
+			
+			<section id="question-content">
+				<ol class="question">
+					<li id="question1" class="question save" contenteditable="true" title="Click to modify question" data-default="true" data-question="1" data-max="40">
+						Enter the first question. <i class="glyphicon glyphicon-pencil"></i></span>
+					</li>
+					<li id="question2" class="question list" data-question="2" >
+						List the three steps of this strategy:
+						<ol>
+							<li>____________________</li>
+							<li>____________________</li>
+							<li>____________________</li>
+						</ol>
+					</li>
+					<li id="question3" class="question save" contenteditable="true" title="Click to modify question" data-default="true" data-question="3" data-max="40">
+						Enter the third question. <i class="glyphicon glyphicon-pencil"></i></span>
+					</li>
+					<li id="question4" class="question save" contenteditable="true" title="Click to modify question" data-default="true" data-question="4" data-max="40">
+						Enter the fourth question. <i class="glyphicon glyphicon-pencil"></i></span>
+					</li>
+					<li id="question5" class="question save" contenteditable="true" title="Click to modify question" data-default="true" data-question="5" data-max="40">
+						Enter the fifth question. <i class="glyphicon glyphicon-pencil"></i></span>
+					</li>
+				</ol>
+			</section>
+		</main>
+		
+		<main class="easy-builder question">
+			<header>
+				<div class="lesson-label">
+					<h1>Easy Guide</h1>
+				</div>
+				<div class="lesson-type">
+					<h2>Teaching <span class="title">Strategy:</h2>
+				</div>
+				<div class="lesson-title">
+					<h2 class="title">Lesson Title</h2>
+				</div>
+				<img class="logo" src="/img/bfl-logo.png">
+			</header>
+			
+			<div class="question-header">
+				<h2 class="title"><i class="glyphicon glyphicon-search"></i> Learn More</h2>
+			</div>
+			
+			<section id="references">
+				<div class="left">
+					<h3>Learn More</h3>
+					<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+					<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+					<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+					<button type="button" class="btn btn-default command" data-command="insertHTML"><i class="glyphicon glyphicon-link"></i></button>
+					<p id="learn-more-description" class="description save" contenteditable="true" title="Learn More content goes here" data-default="true" data-max="35">Learn More content goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+				</div>
+				<div class="right">
+					<h3>References</h3>
+					<button type="button" class="btn btn-default command" data-command="bold"><i class="glyphicon glyphicon-bold"></i></button>
+					<button type="button" class="btn btn-default command" data-command="italic"><i class="glyphicon glyphicon-italic"></i></button>
+					<button type="button" class="btn btn-default command" data-command="insertUnorderedList"><i class="glyphicon glyphicon-list"></i></button>
+					<button type="button" class="btn btn-default command" data-command="insertHTML"><i class="glyphicon glyphicon-link"></i></button>
+					<p id="learn-more-description" class="description save" contenteditable="true" title="Learn More content goes here" data-default="true" data-max="35">References content goes here. <i class="glyphicon glyphicon-pencil"></i></p>
+				</div>
+			</section>
+		</main>
+		
+		<section>
+			<li class="clone variation description" contenteditable="true" title="Click to modify description" data-default="true" data-max="300">Variation description. <i class="glyphicon glyphicon-pencil"></i></li>
+			
+			<i class="clone glyphicon glyphicon-remove" title="Remove Question"></i>
+			
+			<form class="easy-builder" action="/upload.php" target="form_result" method="POST" enctype="multipart/form-data">
+				<input class="picture form-control" name="picture" type="file"></input>
+			</form>
+			
+			<form class="generate-pdf" action="/generate-pdf.php" target="form_result" method="POST"></form>
+				
+			<iframe class="form-result" name="form_result"></iframe>
+			
+			<div id="dialog" title="Basic dialog">
+				<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+			</div>
+			
+			<div id="dialog-pdf" title="Easy Guide PDF"></div>
+			<div id="dialog-instructions">
+				<div class="bs-docs-section" style="margin-bottom: 60px;"><h1 id="overview" class="page-header" style="margin-top: 0px; font-size: 36px; font-family: inherit; padding-top: 20px;">Overview</h1><p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p><h3 id="overview-doctype">HTML5 doctype</h3><p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p><div class="zero-clipboard" style="position: relative;"><span class="btn-clipboard" style="position: absolute; top: 0px; right: 0px; z-index: 10; display: block; padding: 5px 8px; font-size: 12px; color: rgb(119, 119, 119); cursor: pointer; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 0px; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-bottom-left-radius: 4px;">Copy</span></div><div class="highlight" style="padding: 9px 14px; margin-bottom: 14px; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(247, 247, 249);"><pre style="padding: 0px; margin-bottom: 0px; word-break: normal; border: 0px; white-space: nowrap; background-color: transparent;"><code class="html" style="padding-right: 45px; color: rgb(51, 51, 51); display: inline-block;"><span class="cp" style="color: rgb(0, 153, 153);">&lt;!DOCTYPE html&gt;</span>
+				<span class="nt" style="color: rgb(47, 111, 159);">&lt;html</span> <span class="na" style="color: rgb(79, 159, 207);">lang=</span><span class="s" style="color: rgb(212, 73, 80);">"en"</span><span class="nt" style="color: rgb(47, 111, 159);">&gt;</span>
+					...
+				<span class="nt" style="color: rgb(47, 111, 159);">&lt;/html&gt;</span></code></pre></div><h3 id="overview-mobile">Mobile first</h3><p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact,<span style="font-weight: 700;">Bootstrap is mobile first</span>. Mobile first styles can be found throughout the entire library instead of in separate files.</p><p>To ensure proper rendering and touch zooming,&nbsp;<span style="font-weight: 700;">add the viewport meta tag</span>&nbsp;to your&nbsp;<code style="font-size: 13px;">&lt;head&gt;</code>.</p><div class="zero-clipboard" style="position: relative;"><span class="btn-clipboard" style="position: absolute; top: 0px; right: 0px; z-index: 10; display: block; padding: 5px 8px; font-size: 12px; color: rgb(119, 119, 119); cursor: pointer; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 0px; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-bottom-left-radius: 4px;">Copy</span></div><div class="highlight" style="padding: 9px 14px; margin-bottom: 14px; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(247, 247, 249);"><pre style="padding: 0px; margin-bottom: 0px; word-break: normal; border: 0px; white-space: nowrap; background-color: transparent;"><code class="html" style="padding-right: 45px; color: rgb(51, 51, 51); display: inline-block;"><span class="nt" style="color: rgb(47, 111, 159);">&lt;meta</span> <span class="na" style="color: rgb(79, 159, 207);">name=</span><span class="s" style="color: rgb(212, 73, 80);">"viewport"</span> <span class="na" style="color: rgb(79, 159, 207);">content=</span><span class="s" style="color: rgb(212, 73, 80);">"width=device-width, initial-scale=1"</span><span class="nt" style="color: rgb(47, 111, 159);">&gt;</span></code></pre></div><p>You can disable zooming capabilities on mobile devices by adding&nbsp;<code style="font-size: 13px;">user-scalable=no</code>&nbsp;to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p><div class="zero-clipboard" style="position: relative;"><span class="btn-clipboard" style="position: absolute; top: 0px; right: 0px; z-index: 10; display: block; padding: 5px 8px; font-size: 12px; color: rgb(119, 119, 119); cursor: pointer; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 0px; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-bottom-left-radius: 4px;">Copy</span></div><div class="highlight" style="padding: 9px 14px; margin-bottom: 14px; border: 1px solid rgb(225, 225, 232); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(247, 247, 249);"><pre style="padding: 0px; margin-bottom: 0px; word-break: normal; border: 0px; white-space: nowrap; background-color: transparent;"><code class="html" style="padding-right: 45px; color: rgb(51, 51, 51); display: inline-block;"><span class="nt" style="color: rgb(47, 111, 159);">&lt;meta</span> <span class="na" style="color: rgb(79, 159, 207);">name=</span><span class="s" style="color: rgb(212, 73, 80);">"viewport"</span> <span class="na" style="color: rgb(79, 159, 207);">content=</span><span class="s" style="color: rgb(212, 73, 80);">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt" style="color: rgb(47, 111, 159);">&gt;</span></code></pre></div><h3 id="overview-type-links">Typography and links</h3><p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p><ul><li>Set&nbsp;<code style="font-size: 13px;">background-color: #fff;</code>&nbsp;on the&nbsp;<code style="font-size: 13px;">body</code></li><li>Use the&nbsp;<code style="font-size: 13px;">@font-family-base</code>,&nbsp;<code style="font-size: 13px;">@font-size-base</code>, and&nbsp;<code style="font-size: 13px;">@line-height-base</code>&nbsp;attributes as our typographic base</li><li>Set the global link color via&nbsp;<code style="font-size: 13px;">@link-color</code>&nbsp;and apply link underlines only on&nbsp;<code style="font-size: 13px;">:hover</code></li></ul><p>These styles can be found within&nbsp;<code style="font-size: 13px;">scaffolding.less</code>.</p><h3 id="overview-normalize">Normalize.css</h3><p>For improved cross-browser rendering, we use&nbsp;<a href="http://necolas.github.io/normalize.css/" target="_blank" style="background-position: 0px 0px;">Normalize.css</a>, a project by&nbsp;<a href="http://twitter.com/necolas" target="_blank" style="background-position: 0px 0px;">Nicolas Gallagher</a>&nbsp;and&nbsp;<a href="http://twitter.com/jon_neal" target="_blank" style="background-position: 0px 0px;">Jonathan Neal</a>.</p></div><div class="bs-docs-section" style="margin-bottom: 60px;"><p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes&nbsp;<a href="http://getbootstrap.com/css/#grid-example-basic" style="background-position: 0px 0px;">predefined classes</a>&nbsp;for easy layout options, as well as powerful&nbsp;<a href="http://getbootstrap.com/css/#grid-less" style="background-position: 0px 0px;">mixins for generating more semantic layouts</a>.</p><h3 id="grid-intro">Introduction</h3></div>
+			</div>
+		</section>
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery-ui.min.js"></script>
+		<!-- Overrides cancel dialog icon
+			<script src="/js/bootstrap.min.js"></script> -->
+		<script src="/js/main.js"></script>
+	</body>
+</html>
